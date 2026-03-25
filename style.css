@@ -509,7 +509,135 @@ img {
   .cta-box {
     border-radius: 18px;
   }
+.hero-top3 {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
 
+.hero-top3-header {
+  margin-bottom: 18px;
+}
+
+.hero-top3-header h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.hero-top3-header p {
+  margin: 0;
+  color: rgba(229, 238, 252, 0.76);
+}
+
+.top3-list {
+  display: grid;
+  gap: 14px;
+}
+
+.top3-item {
+  display: grid;
+  grid-template-columns: 84px 1fr 24px;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #172033;
+  border: 1px solid rgba(219, 227, 240, 0.95);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top3-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+}
+
+.top3-logo-wrap {
+  width: 84px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.top3-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.top3-content {
+  min-width: 0;
+}
+
+.top3-content h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.top3-content p {
+  margin: 0;
+  color: #667085;
+  font-size: 0.93rem;
+  line-height: 1.4;
+}
+
+.top3-arrow {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: right;
+}
+
+.hero-top3-note {
+  display: block;
+  margin-top: 16px;
+  color: rgba(229, 238, 252, 0.62);
+}
+
+/* responsive */
+@media (max-width: 720px) {
+  .hero-top3 {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .hero-top3-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .top3-item {
+    grid-template-columns: 72px 1fr 20px;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .top3-logo-wrap {
+    width: 72px;
+    height: 48px;
+  }
+
+  .top3-content h3 {
+    font-size: 1rem;
+  }
+
+  .top3-content p {
+    font-size: 0.88rem;
+  }
+}
+
+
+  
   .offer-amount {
     font-size: 1.55rem;
   }
