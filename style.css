@@ -1,3 +1,519 @@
+:root {
+  --bg: #0f172a;
+  --bg-soft: #111827;
+  --surface: #ffffff;
+  --surface-2: #eff6ff;
+  --text: #172033;
+  --muted: #667085;
+  --border: #dbe3f0;
+  --primary: #22c55e;
+  --primary-dark: #16a34a;
+  --accent: #0b1220;
+  --gold: #f59e0b;
+  --shadow: 0 14px 38px rgba(15, 23, 42, 0.16);
+  --radius: 18px;
+  --container: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), transparent 30%),
+    linear-gradient(180deg, #0f172a 0%, #101826 100%);
+  color: #e5eefc;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(100% - 32px, var(--container));
+  margin: 0 auto;
+}
+
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 18, 32, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-inner {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav a {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+/* HERO */
+.hero {
+  padding: 72px 0 36px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.95fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.eyebrow,
+.section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.hero-text {
+  margin: 0 0 24px;
+  max-width: 60ch;
+  color: rgba(229, 238, 252, 0.78);
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.hero-points {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(229, 238, 252, 0.78);
+}
+
+.hero-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card h2 {
+  margin: 0 0 12px;
+  font-size: 1.85rem;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+.hero-card p {
+  margin: 0 0 18px;
+  color: rgba(229, 238, 252, 0.76);
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.14);
+  color: #86efac;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.hero-card small {
+  display: block;
+  margin-top: 12px;
+  color: rgba(229, 238, 252, 0.62);
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #052e16;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* SECTIONS */
+.offers-section,
+.info-section,
+.faq-section,
+.bottom-cta {
+  padding: 32px 0 72px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading.narrow {
+  max-width: 760px;
+}
+
+.section-heading h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.section-heading p {
+  margin: 0;
+  color: rgba(229, 238, 252, 0.74);
+}
+
+/* CARDS */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid rgba(219, 227, 240, 0.9);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  color: var(--text);
+}
+
+.offer-card.featured {
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  box-shadow: 0 14px 34px rgba(34, 197, 94, 0.14);
+}
+
+.offer-top {
+  margin-bottom: 18px;
+}
+
+.offer-rank {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+}
+
+.offer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border: 1px solid var(--border);
+}
+
+.offer-brand h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.brand-subtitle {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.offer-main {
+  margin-bottom: 18px;
+}
+
+.offer-amount {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+.offer-description {
+  margin: 0;
+  color: var(--muted);
+}
+
+.offer-features {
+  margin: 0 0 20px;
+  padding-left: 18px;
+  color: var(--text);
+}
+
+.offer-features li + li {
+  margin-top: 6px;
+}
+
+.offer-actions {
+  margin-top: auto;
+}
+
+.offer-note {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* STEPS */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.step-number {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #86efac;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.step-card h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.step-card p {
+  margin: 0;
+  color: rgba(229, 238, 252, 0.74);
+}
+
+/* FAQ */
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  color: #ffffff;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item p {
+  margin: 12px 0 0;
+  color: rgba(229, 238, 252, 0.76);
+}
+
+/* CTA */
+.cta-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: linear-gradient(135deg, #f59e0b 0%, #22c55e 100%);
+  color: #0b1220;
+  border-radius: 24px;
+  padding: 30px;
+}
+
+.cta-box h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.1;
+}
+
+.cta-box p {
+  margin: 0;
+  color: rgba(11, 18, 32, 0.82);
+}
+
+.cta-box .section-label {
+  background: rgba(255,255,255,0.4);
+  color: #0b1220;
+}
+
+/* FOOTER */
+.site-footer {
+  padding: 24px 0 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-inner p {
+  margin: 0;
+  color: rgba(229, 238, 252, 0.64);
+  font-size: 0.92rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 0;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 36px;
+  }
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card,
+  .offer-card,
+  .step-card,
+  .faq-item,
+  .cta-box {
+    border-radius: 18px;
+  }
+
+  .offer-amount {
+    font-size: 1.55rem;
+  }
+}
 .bookmakers-list-section {
   padding: 24px 0 72px;
 }
