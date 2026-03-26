@@ -200,7 +200,7 @@ img {
   margin-bottom: 14px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(34, 197, 94, 0.14);
+  background: #1b820d;
   color: #86efac;
   font-size: 0.8rem;
   font-weight: 700;
@@ -210,7 +210,7 @@ img {
   margin: 0 0 10px;
   font-size: 2rem;
   line-height: 1.1;
-  color: #ffffff;
+  color: #000000;
 }
 
 .hero-top3-header p {
