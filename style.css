@@ -96,9 +96,13 @@ img {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.95fr;
-  gap: 28px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 520px);
+  gap: 32px;
+  align-items: start;
+}
+
+.hero-content {
+  min-width: 0;
 }
 
 .eyebrow,
@@ -141,43 +145,6 @@ img {
   color: rgba(229, 238, 252, 0.78);
 }
 
-.hero-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-}
-
-.hero-card h2 {
-  margin: 0 0 12px;
-  font-size: 1.85rem;
-  line-height: 1.15;
-  color: #ffffff;
-}
-
-.hero-card p {
-  margin: 0 0 18px;
-  color: rgba(229, 238, 252, 0.76);
-}
-
-.hero-badge {
-  display: inline-block;
-  margin-bottom: 14px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(34, 197, 94, 0.14);
-  color: #86efac;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.hero-card small {
-  display: block;
-  margin-top: 12px;
-  color: rgba(229, 238, 252, 0.62);
-}
-
 /* BUTTONS */
 .btn {
   display: inline-flex;
@@ -214,7 +181,120 @@ img {
   width: 100%;
 }
 
+/* HERO TOP 3 */
+.hero-top3 {
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero-top3-header {
+  margin-bottom: 18px;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.14);
+  color: #86efac;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.hero-top3-header h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.hero-top3-header p {
+  margin: 0;
+  color: rgba(229, 238, 252, 0.76);
+}
+
+.top3-list {
+  display: grid;
+  gap: 14px;
+}
+
+.top3-item {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) 22px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #172033;
+  border: 1px solid rgba(219, 227, 240, 0.95);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top3-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
+}
+
+.top3-logo-wrap {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.top3-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.top3-content {
+  min-width: 0;
+}
+
+.top3-content h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.top3-content p {
+  margin: 0;
+  color: #667085;
+  font-size: 0.93rem;
+  line-height: 1.4;
+}
+
+.top3-arrow {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: right;
+}
+
+.hero-top3-note {
+  display: block;
+  margin-top: 16px;
+  color: rgba(229, 238, 252, 0.62);
+}
+
 /* SECTIONS */
+.bookmakers-list-section,
 .offers-section,
 .info-section,
 .faq-section,
@@ -243,7 +323,118 @@ img {
   color: rgba(229, 238, 252, 0.74);
 }
 
-/* CARDS */
+/* LISTA BOOKMAKERS */
+.bookmakers-list {
+  display: grid;
+  gap: 18px;
+}
+
+.bookmaker-row {
+  display: grid;
+  grid-template-columns: 72px 260px 1fr 220px;
+  gap: 18px;
+  align-items: center;
+  background: #ffffff;
+  color: #172033;
+  border: 1px solid rgba(219, 227, 240, 0.95);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.bookmaker-row.featured-row {
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  box-shadow: 0 14px 34px rgba(34, 197, 94, 0.14);
+}
+
+.bookmaker-rank {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.bookmaker-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bookmaker-logo {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid #dbe3f0;
+  background: #f8fafc;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.bookmaker-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.bookmaker-brand h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.bookmaker-subtitle {
+  margin: 4px 0 0;
+  color: #667085;
+  font-size: 0.92rem;
+}
+
+.bookmaker-content {
+  min-width: 0;
+}
+
+.bookmaker-description {
+  margin: 0 0 10px;
+  color: #667085;
+}
+
+.bookmaker-features {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.bookmaker-features li + li {
+  margin-top: 4px;
+}
+
+.bookmaker-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.license-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #15803d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* OFFERS GRID */
 .offers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -292,14 +483,23 @@ img {
 .brand-logo {
   width: 58px;
   height: 58px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 14px;
   background: #f8fafc;
   color: #0f172a;
   font-size: 0.85rem;
   font-weight: 800;
   border: 1px solid var(--border);
+  overflow: hidden;
+  padding: 8px;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .offer-brand h3 {
@@ -464,12 +664,16 @@ img {
 
 /* RESPONSIVE */
 @media (max-width: 1100px) {
-  .offers-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-top3 {
+    max-width: 100%;
+  }
+
+  .offers-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .steps-grid {
@@ -478,6 +682,20 @@ img {
 
   .cta-box {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bookmaker-row {
+    grid-template-columns: 60px 1fr;
+    align-items: start;
+  }
+
+  .bookmaker-content {
+    grid-column: 1 / -1;
+  }
+
+  .bookmaker-meta {
+    grid-column: 1 / -1;
     align-items: flex-start;
   }
 }
@@ -502,15 +720,57 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .hero-card,
+  .bookmaker-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .hero-top3,
   .offer-card,
   .step-card,
   .faq-item,
-  .cta-box {
+  .cta-box,
+  .bookmaker-row {
     border-radius: 18px;
+  }
+
+  .hero-top3 {
+    padding: 20px;
+  }
+
+  .hero-top3-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .top3-item {
+    grid-template-columns: 90px minmax(0, 1fr) 18px;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .top3-logo-wrap {
+    width: 90px;
+    height: 90px;
+  }
+
+  .top3-content h3 {
+    font-size: 1rem;
+  }
+
+  .top3-content p {
+    font-size: 0.88rem;
   }
 
   .offer-amount {
     font-size: 1.55rem;
+  }
+
+  .bookmaker-meta {
+    align-items: stretch;
+  }
+
+  .license-badge {
+    width: fit-content;
   }
 }
