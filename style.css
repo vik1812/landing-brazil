@@ -3,12 +3,12 @@
   --bg-soft: #111827;
   --surface: #ffffff;
   --surface-2: #eff6ff;
-  --text: #172033;
-  --muted: #667085;
+  --text: #000000;
+  --muted: #000000;
   --border: #dbe3f0;
-  --primary: #22c55e;
-  --primary-dark: #16a34a;
-  --accent: #0b1220;
+  --primary: #1b820d;
+  --primary-dark: #166b0a;
+  --accent: #1b820d;
   --gold: #f59e0b;
   --shadow: 0 14px 38px rgba(15, 23, 42, 0.16);
   --radius: 18px;
@@ -51,7 +51,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(11, 18, 32, 0.82);
+  background: #1b820d;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -78,13 +78,14 @@ img {
 }
 
 .nav a {
-  color: rgba(255, 255, 255, 0.78);
+  color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
 .nav a:hover {
   color: #ffffff;
+  opacity: 0.85;
 }
 
 /* HERO */
@@ -120,13 +121,13 @@ img {
   font-size: clamp(2.1rem, 4vw, 4rem);
   line-height: 1.04;
   letter-spacing: -0.04em;
-  color: #ffffff;
+  color: #000000;
 }
 
 .hero-text {
   margin: 0 0 24px;
   max-width: 60ch;
-  color: rgba(229, 238, 252, 0.78);
+  color: #000000;
   font-size: 1.05rem;
 }
 
@@ -140,7 +141,7 @@ img {
 .hero-points {
   margin: 0;
   padding-left: 20px;
-  color: rgba(229, 238, 252, 0.78);
+  color: #000000;
 }
 
 /* BUTTONS */
@@ -156,12 +157,12 @@ img {
 }
 
 .btn-primary {
-  background: var(--primary);
-  color: #052e16;
+  background: #1b820d;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark);
+  background: #166b0a;
   color: #ffffff;
 }
 
@@ -214,7 +215,7 @@ img {
 
 .hero-top3-header p {
   margin: 0;
-  color: rgba(229, 238, 252, 0.76);
+  color: #000000;
 }
 
 .top3-list {
@@ -288,7 +289,7 @@ img {
 .hero-top3-note {
   display: block;
   margin-top: 16px;
-  color: rgba(229, 238, 252, 0.62);
+  color: #000000;
 }
 
 /* SECTIONS */
@@ -313,12 +314,12 @@ img {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: #ffffff;
+  color: #000000;
 }
 
 .section-heading p {
   margin: 0;
-  color: rgba(229, 238, 252, 0.74);
+  color: #000000;
 }
 
 /* LISTA BOOKMAKERS */
@@ -575,12 +576,12 @@ img {
 
 .step-card h3 {
   margin: 0 0 10px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .step-card p {
   margin: 0;
-  color: rgba(229, 238, 252, 0.74);
+  color: #000000;
 }
 
 /* FAQ */
@@ -601,7 +602,7 @@ img {
   cursor: pointer;
   font-weight: 700;
   list-style: none;
-  color: #ffffff;
+  color: #000000;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -610,7 +611,7 @@ img {
 
 .faq-item p {
   margin: 12px 0 0;
-  color: rgba(229, 238, 252, 0.76);
+  color: #000000;
 }
 
 /* CTA */
